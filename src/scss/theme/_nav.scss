@@ -1,0 +1,34 @@
+//
+// nav.scss
+//
+
+.nav {
+  --#{$prefix}nav-tabs-item-spacer: #{$nav-tabs-item-spacer};
+  --#{$prefix}nav-link-color-dark: #{$nav-link-color-dark};
+  --#{$prefix}nav-link-hover-color-dark: #{$nav-link-hover-color-dark};
+  --#{$prefix}nav-link-active-color-dark: #{$nav-link-active-color-dark};
+}
+
+.nav-tabs .nav-link {
+  padding: 0 $nav-tabs-link-padding-x $nav-tabs-link-padding-bottom;
+  border-width: 0 0 var(--#{$prefix}nav-tabs-border-width) 0;
+}
+
+.nav-tabs .nav-item + .nav-item {
+  margin-left: var(--#{$prefix}nav-tabs-item-spacer);
+}
+
+
+// Dark
+
+.nav-dark .nav-link {
+  color: var(--#{$prefix}nav-link-color-dark);
+}
+
+.nav-dark .nav-link:hover {
+  color: var(--#{$prefix}nav-link-hover-color-dark);
+}
+
+.nav-dark .nav-link.active {
+  color: var(--#{$prefix}nav-link-active-color-dark);
+}

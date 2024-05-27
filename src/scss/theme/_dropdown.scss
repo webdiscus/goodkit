@@ -1,0 +1,87 @@
+//
+// dropdown.scss
+//
+
+.dropdown {
+  --#{$prefix}dropdown-min-width-lg: #{$dropdown-min-width-lg};
+  --#{$prefix}dropdown-min-width-xl: #{$dropdown-min-width-xl};
+}
+
+// Menu
+
+.dropdown-menu {
+  padding: var(--#{$prefix}dropdown-padding-y) var(--#{$prefix}dropdown-padding-x);
+}
+
+
+// Sizing
+
+.dropdown-menu-auto {
+  min-width: auto;
+}
+
+.dropdown-menu-lg {
+  min-width: var(--#{$prefix}dropdown-min-width-lg);
+}
+
+.dropdown-menu-xl {
+  min-width: var(--#{$prefix}dropdown-min-width-xl);
+}
+
+
+// Flush
+
+.dropdown-menu-flush {
+  padding: 0;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+
+// Grid
+
+.dropdown-menu-col {
+  background-color: var(--#{$prefix}dropdown-bg);
+  border-radius: var(--#{$prefix}dropdown-border-radius);
+  box-shadow: var(--#{$prefix}dropdown-box-shadow);
+}
+
+.dropdown-menu-body {
+  padding: var(--#{$prefix}dropdown-padding-y) var(--#{$prefix}dropdown-padding-x);
+}
+
+.dropdown-menu-footer {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  margin-left: var(--#{$prefix}dropdown-padding-x);
+  margin-right: var(--#{$prefix}dropdown-padding-x);
+  border-top: var(--#{$prefix}border-width) solid var(--#{$prefix}border-color);
+}
+
+
+// Item
+
+.dropdown-item + .dropdown-item {
+  margin-top: .75rem;
+}
+
+
+// Link
+
+.dropdown-link {
+  @extend .dropdown-item;
+}
+
+
+// Header
+
+.dropdown-header {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 1.25rem;
+  font-size: $h6-font-size;
+}
+
+.dropdown-item + .dropdown-header {
+  margin-top: 2.5rem;
+}

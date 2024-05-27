@@ -1,0 +1,21 @@
+//
+// modals.scss
+//
+
+.modal {
+  --#{$prefix}modal-close-offset: #{$modal-close-offset};
+}
+
+.modal-content {
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+
+// Close
+
+.modal .btn-close {
+  position: absolute;
+  top: var(--#{$prefix}modal-close-offset);
+  right: var(--#{$prefix}modal-close-offset);
+}

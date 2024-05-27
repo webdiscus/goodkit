@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+  <head>
+    {{> head title="Goodkit"}}
+  </head>
+  <body class="docs-body">
+
+    <!-- MODALS -->
+    {{> modals}}
+
+    <!-- NAVBAR -->
+    {{> navbar classList="navbar-light fixed-top bg-white border-bottom"}}
+
+    <!-- BREADCRUMB -->
+    {{> docs/breadcrumb title="Badges"}}
+
+    <!-- CONTENT -->
+    <section>
+      <div class="container-fluid">
+        <div class="row align-items-start">
+          <div class="col-lg-3 col-xl-2 docs-sidenav docs-sidenav-start">
+
+            {{> docs/nav}}
+
+          </div>
+          <div class="col-lg-9 col-xl-8 offset-lg-3 offset-xl-2 py-6 py-md-9 px-lg-10">
+
+            {{> docs/header title="Badges" isCustom=false description="A small count and labeling component." bootstrapDocs="https://getbootstrap.com/docs/5.2/components/badge/" pluginsDocs=""}}
+
+            {{> docs/subheader title="" id="id" isCustom=false description=""}}
+
+            <!-- Card -->
+            <div class="card card-sm docs-card mb-5">
+              <div class="card-body">
+                <h1>Example heading <span class="badge bg-secondary">New</span></h1>
+                <h2>Example heading <span class="badge bg-secondary">New</span></h2>
+                <h3>Example heading <span class="badge bg-secondary">New</span></h3>
+                <h4>Example heading <span class="badge bg-secondary">New</span></h4>
+                <h5>Example heading <span class="badge bg-secondary">New</span></h5>
+                <h6>Example heading <span class="badge bg-secondary">New</span></h6>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="card card-sm docs-card mb-5">
+              <div class="card-body">
+                <button type="button" class="btn btn-primary">
+                  Notifications <span class="badge text-bg-light">4</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="card card-sm docs-card mb-5">
+              <div class="card-body">
+                <button type="button" class="btn btn-primary position-relative">
+                  Inbox
+                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    99+
+                    <span class="visually-hidden">unread messages</span>
+                  </span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="card card-sm docs-card mb-5">
+              <div class="card-body">
+                <button type="button" class="btn btn-primary position-relative">
+                  Profile
+                  <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+                    <span class="visually-hidden">New alerts</span>
+                  </span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="card card-sm docs-card mb-5">
+              <div class="card-body">
+                <span class="badge text-bg-primary">Primary</span>
+                <span class="badge text-bg-secondary">Secondary</span>
+                <span class="badge text-bg-success">Success</span>
+                <span class="badge text-bg-danger">Danger</span>
+                <span class="badge text-bg-warning">Warning</span>
+                <span class="badge text-bg-info">Info</span>
+                <span class="badge text-bg-dark">Dark</span>
+                <span class="badge text-bg-light">Light</span>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="card card-sm docs-card mb-5">
+              <div class="card-body">
+                <span class="badge rounded-pill text-bg-primary">Primary</span>
+                <span class="badge rounded-pill text-bg-secondary">Secondary</span>
+                <span class="badge rounded-pill text-bg-success">Success</span>
+                <span class="badge rounded-pill text-bg-danger">Danger</span>
+                <span class="badge rounded-pill text-bg-warning">Warning</span>
+                <span class="badge rounded-pill text-bg-info">Info</span>
+                <span class="badge rounded-pill text-bg-dark">Dark</span>
+                <span class="badge rounded-pill text-bg-light">Light</span>
+              </div>
+            </div>
+
+            {{> docs/subheader title="Soft" id="soft" isCustom=true description="Creates a soft variant of a corresponding contextual badge variation. These can be used exactly like Bootstrap's core badges, including modifying classes like .badge-pill, as an <a> itself, or inside of <button> or <a> elements."}}
+
+            <!-- Card -->
+            <div class="card card-sm docs-card">
+              <div class="card-body">
+
+                <!-- Badges -->
+                <span class="badge bg-primary-soft">Primary</span>
+                <span class="badge bg-secondary-soft">Secondary</span>
+                <span class="badge bg-success-soft">Success</span>
+                <span class="badge bg-info-soft">Info</span>
+                <span class="badge bg-warning-soft">Warning</span>
+                <span class="badge bg-danger-soft">Danger</span>
+                <span class="badge bg-light-soft">Light</span>
+                <span class="badge bg-dark-soft">Dark</span>
+
+              </div>
+              <div class="card-footer">
+                <code class="html highlight">
+                  &lt;span&nbsp;class=&quot;badge&nbsp;bg-primary-soft&quot;&gt;Primary&lt;/span&gt;<br />&lt;span&nbsp;class=&quot;badge&nbsp;bg-secondary-soft&quot;&gt;Secondary&lt;/span&gt;<br />&lt;span&nbsp;class=&quot;badge&nbsp;bg-success-soft&quot;&gt;Success&lt;/span&gt;<br />&lt;span&nbsp;class=&quot;badge&nbsp;bg-info-soft&quot;&gt;Info&lt;/span&gt;<br />&lt;span&nbsp;class=&quot;badge&nbsp;bg-warning-soft&quot;&gt;Warning&lt;/span&gt;<br />&lt;span&nbsp;class=&quot;badge&nbsp;bg-danger-soft&quot;&gt;Danger&lt;/span&gt;<br />&lt;span&nbsp;class=&quot;badge&nbsp;bg-light-soft&quot;&gt;Light&lt;/span&gt;<br />&lt;span&nbsp;class=&quot;badge&nbsp;bg-dark-soft&quot;&gt;Dark&lt;/span&gt;
+                </code>
+              </div>
+            </div>
+
+            {{> docs/subheader title="Uppercase" id="uppercase" isCustom=false description="Combine badges with text utilities to get a completely new look."}}
+
+            <!-- Card -->
+            <div class="card card-sm docs-card">
+              <div class="card-body">
+
+                <!-- Badge -->
+                <span class="badge bg-primary h6 text-uppercase">Primary</span>
+                <span class="badge bg-primary-soft h6 text-uppercase">Primary soft</span>
+
+              </div>
+              <div class="card-footer">
+                <code class="html highlight">
+                  &lt;span&nbsp;class=&quot;badge&nbsp;bg-primary&nbsp;h6&nbsp;text-uppercase&quot;&gt;Primary&lt;/span&gt;<br />&lt;span&nbsp;class=&quot;badge&nbsp;bg-primary-soft&nbsp;h6&nbsp;text-uppercase&quot;&gt;Primary&nbsp;soft&lt;/span&gt;
+                </code>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-lg-3 col-xl-2 d-none d-xl-block docs-sidenav docs-sidenav-end">
+
+            <!-- List -->
+            <div class="my-6 my-md-9 px-lg-8 border-start">
+
+              <!-- List -->
+              <ul class="list-unstyled fs-xs mb-0">
+                <li class="mb-2">
+                  <a class="text-reset" href="#soft" data-scroll>Soft</a>
+                </li>
+                <li class="mb-2">
+                  <a class="text-reset" href="#uppercase" data-scroll>Uppercase</a>
+                </li>
+              </ul>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JAVASCRIPT -->
+    {{> scripts}}
+
+  </body>
+</html>

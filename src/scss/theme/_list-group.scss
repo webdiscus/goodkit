@@ -1,0 +1,75 @@
+//
+// list-group.scss
+//
+
+.list-group {
+  --#{$prefix}list-group-item-padding-y-sm: #{$list-group-item-padding-y-sm};
+  --#{$prefix}list-group-item-padding-y-lg: #{$list-group-item-padding-y-lg};
+  --#{$prefix}list-group-hover-box-shadow: #{$list-group-hover-box-shadow};
+}
+
+// Flush
+
+.list-group-flush .list-group-item {
+  padding-left: 0;
+  padding-right: 0;
+  border-width: 0;
+}
+
+.list-group-flush .list-group-item + .list-group-item {
+  border-top-width: var(--#{$prefix}border-width);
+}
+
+.list-group-flush .list-group-item.active {
+  background-color: var(--#{$prefix}list-group-bg);
+  color: var(--#{$prefix}list-group-color);
+}
+
+.list-group-flush .list-group-item + .list-group-item.active {
+  margin-top: 0;
+}
+
+
+// Sizing
+
+.list-group-lg .list-group-item {
+  padding-top: var(--#{$prefix}list-group-item-padding-y-lg);
+  padding-bottom: var(--#{$prefix}list-group-item-padding-y-lg);
+}
+
+.list-group-sm .list-group-item {
+  padding-top: var(--#{$prefix}list-group-item-padding-y-sm);
+  padding-bottom: var(--#{$prefix}list-group-item-padding-y-sm);
+}
+
+
+// Hover
+
+.list-group-hover .list-group-item {
+  position: relative;
+  transition: $transition-base;
+  transition-property: border-color;
+}
+
+.list-group-hover .list-group-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: calc(100% + 5rem);
+  border-radius: var(--#{$prefix}border-radius) 0 var(--#{$prefix}border-radius) 0;
+  box-shadow: var(--#{$prefix}list-group-hover-box-shadow);
+  transition: $transition-base;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+
+.list-group-hover .list-group-item:hover,
+.list-group-hover .list-group-item:hover + .list-group-item[href] {
+  border-top-color: transparent;
+}
+
+.list-group-hover .list-group-item:hover::before {
+  opacity: 1;
+}

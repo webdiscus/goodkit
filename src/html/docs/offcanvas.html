@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    {{> head title="Goodkit"}}
+  </head>
+  <body class="docs-body">
+
+    <!-- MODALS -->
+    {{> modals}}
+
+    <!-- NAVBAR -->
+    {{> navbar classList="navbar-light fixed-top bg-white border-bottom"}}
+
+    <!-- BREADCRUMB -->
+    {{> docs/breadcrumb title="Accordion"}}
+
+    <!-- CONTENT -->
+    <section>
+      <div class="container-fluid">
+        <div class="row align-items-start">
+          <div class="col-lg-3 col-xl-2 docs-sidenav docs-sidenav-start">
+
+            {{> docs/nav}}
+
+          </div>
+          <div class="col-lg-9 col-xl-8 offset-lg-3 offset-xl-2 py-6 py-md-9 px-lg-10">
+
+            {{> docs/header title="Offcanvas" isCustom=false description="Build hidden sidebars into your project for navigation, shopping carts, and more with a few classes and our JavaScript plugin." bootstrapDocs="https://getbootstrap.com/docs/5.2/components/offcanvas/" pluginsDocs=""}}
+
+            {{> docs/subheader title="" id="id" isCustom=false description=""}}
+
+            <!-- Card -->
+            <div class="card card-sm docs-card">
+              <div class="card-body">
+                <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                  Launch demo offcanvas
+                </a>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                  <div class="offcanvas-header">
+                    <h2 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body pt-0">
+                    <div>
+                      Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-lg-3 col-xl-2 d-none d-xl-block docs-sidenav docs-sidenav-end"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JAVASCRIPT -->
+    {{> scripts}}
+
+  </body>
+</html>
